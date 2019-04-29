@@ -5,9 +5,19 @@ Un script pour déterminer les limites de temps de décharge syndicale à la fé
 
 Une installation de python 3.x
 
+## Installer le script
+
+Pas d'installation requise.
+
+Le script python se nomme `verif-decharge.py`. Il peut être lancé
+directement par la commande `python3 verif-decharge.py`.
+
+Dans le répertoire `bin` se trouvent des exécutables qui peuvent être
+utilisés directement, pour Linux et Windows.
+
 ## Usage :
 
-`verif-decharges.py [-h] [-y YEAR] [-v] fichier`
+`verif-decharges[.py|exe] [-h] [-y YEAR] [-v] fichier`
 
 `fichier` est un fichier CSV à parser. Le fichier doit être formaté comme
 avec une première ligne comme suit : Civilité Nom d'usage Prénom 2019-2018
