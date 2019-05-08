@@ -26,8 +26,6 @@ directement par la commande `python3 verif-decharge.py`.
 Dans le répertoire `bin` se trouvent des exécutables qui peuvent être
 utilisés directement, pour Linux et Windows.
 
-## Cons
-
 ## Usage en ligne de commande :
 
 `verif-decharges[.py|exe] [-h] [-y YEAR] [-v] fichier`
