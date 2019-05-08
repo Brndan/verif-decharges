@@ -3,7 +3,18 @@ Un script pour déterminer les limites de temps de décharge syndicale à la fé
 
 ## Prérequis
 
-Une installation de python 3.x
+Une installation de python 3.x, et Gooey ainsi que wxgtk
+
+Sous Ubuntu :
+`sudo apt-get build-dep libwxgtk3.0-0v5`
+
+`pip3 install Gooey`
+
+## Créer un exécutable
+
+`pip3 install PyInstaller`
+
+`pyinstaller -F verif-decharge.spec`
 
 ## Installer le script
 
@@ -15,7 +26,9 @@ directement par la commande `python3 verif-decharge.py`.
 Dans le répertoire `bin` se trouvent des exécutables qui peuvent être
 utilisés directement, pour Linux et Windows.
 
-## Usage :
+## Cons
+
+## Usage en ligne de commande :
 
 `verif-decharges[.py|exe] [-h] [-y YEAR] [-v] fichier`
 

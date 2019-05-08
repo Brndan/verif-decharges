@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+from gooey import Gooey,GooeyParser
 import csv
 import sys
-import argparse
+#import argparse
 import re
 
 
@@ -83,13 +84,20 @@ def write_csv_file(rows):
             writer.writerow(row)
     return
 
+@Gooey(language='french')
 def main():
     # gestion des arguments de la ligne de commande
-    parser = argparse.ArgumentParser(description="Vérification des décharges")
-    parser.add_argument("file", help="path du fichier csv à parser\n\
-                        le fichier csv doit contenir sur la première ligne (a minima):\n \
-                        Civilité-Nom d'usage-Prénom suivi des colonnes de dates: 2018-2019 2017-2018 ...")
-    parser.add_argument("-y", "--year", help="année de départ pour la vérification. Par défaut la première année rencontrée dans le fichier CSV") 
+# Version argparse pour ligne de commande à décommenter
+#    parser = argparse.ArgumentParser(description="Vérification des décharges")
+
+# Version Gooey pour GUI 
+    parser = GooeyParser(description="Vérification des décharges")
+    parser.add_argument("file", help="Fichier CSV\n\
+                        Le fichier CSV doit contenir sur la première ligne (a minima):\n \
+                        Civilité-Nom d'usage-Prénom suivi des colonnes de dates: 2018-2019 2017-2018 ...", widget='FileChooser')
+    parser.add_argument("-y", "--year", help="Année de départ pour la vérification.\n \
+Par défaut la première année rencontrée dans le fichier CSV.") 
+#    parser.add_argument("-v", "--verbose", action="store_true", help="Affiche sur la ligne de commande tous les noms avec le nombre d'ETP et le nombre d'années")
     parser.add_argument("-v", "--verbose", action="store_true", help="Affiche sur la ligne de commande tous les noms avec le nombre d'ETP et le nombre d'années")
     args =parser.parse_args()
 
