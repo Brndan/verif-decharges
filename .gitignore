@@ -1,1 +1,4 @@
 resultat.csv
+__pycache__/
+dist/
+build/
