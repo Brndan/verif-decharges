@@ -10,7 +10,7 @@ import re
 
 def year_constraint(infos_pers, years):
     """
-    Retourne le nombre d'années effectué dans la période years
+    Retourne le nombre d'années effectués dans la période years
     Stoppe le parcour de years si il y a deux années consécutives sans décharge
     """
     count = 0
