@@ -77,7 +77,7 @@ def write_csv_file(rows):
                 row += ['RAS']
             if r['etp'] >= 3:
                 row += ['Limite des 3 ETP atteinte']
-            elif r['etp'] > 2.5:
+            elif r['etp'] >= 2.5:
                 row += ['Bientôt 3 ETP atteints']
             else:
                 row += ['RAS']
@@ -131,7 +131,7 @@ Par défaut la première année rencontrée dans le fichier CSV.")
                 print(row["Nom d'usage"], row["Prénom"], row['etp'], row['year'])
 
             # On ne retient que les noms >=7 ou etp>2.5
-            if row['year'] >= 7 or row['etp'] > 2.5:
+            if row['year'] >= 7 or row['etp'] >= 2.5:
                 resultat.append(row)
 
     write_csv_file(resultat)
